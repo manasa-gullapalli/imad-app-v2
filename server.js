@@ -15,12 +15,14 @@ app.get('/nivas',function (req,res){
 });
 
 app.get("/myfamily",function(req,res){
-    res.send("A LOT TO SAY ABOUT MY FAMILY");
+    res.sendFile(path.join(__dirname, 'ui', 'family.html'));
+
     
 });
 
 app.get("/friends",function(req,res){
-    res.send("I HAVE A LOT OF FRIENDS AND ENJOY THEIR COMPANY");
+   res.sendFile(path.join(__dirname, 'ui', 'friends.html'));
+
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
