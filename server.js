@@ -8,7 +8,18 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+app.get('/nivas',function (req,res){
+    res.send("NIVAS IS MY BROTHER");
+});
 
+app.get("/myfamily",function(req,res){
+    res.send("A LOT TO SAY ABOUT MY FAMILY");
+    
+});
+
+app.get("/friends",function(req,res){
+    res.send("I HAVE A LOT OF FRIENDS AND ENJOY THEIR COMPANY");
+});
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
