@@ -10,6 +10,8 @@ app.get('/', function (req, res) {
 });
 app.get('/nivas',function (req,res){
     res.send("NIVAS IS MY BROTHER");
+    res.sendFile(path.join(__dirname, 'ui', 'nivas.html'));
+
 });
 
 app.get("/myfamily",function(req,res){
