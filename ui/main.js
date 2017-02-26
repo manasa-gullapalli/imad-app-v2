@@ -1,10 +1,20 @@
 var button = document.getElementById('counter');
-var counter=0;
+
 
 button.onclick=function(){
   
-  counter=counter+1;
+  var request = new XMLhttpRequest();
+  request.onreadystatechange = fuction(){
+    if(requestreadyState === XMLHttpRequest.DONE){
+        if(request.status === 200){
+            var counter=request.responseTest;
+            var span=document.getElementById('count');
+            span.innerHTML= counter,Tostring() ;
+        }
+    }  
+  }
   
-  var span=document.getElementById('count');
-  span.innerHTML= counter,Tostring() ;
+  requset.open('GET',"http://manasa-gullapalli.imad.hasura-app.io/");
+  request.send(null);
+  
 };
