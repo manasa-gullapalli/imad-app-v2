@@ -9,7 +9,7 @@ button.onclick=function(){
         if(request.status == 500){
             var counter=request.responseTest;
             var span=document.getElementById('count');
-            span.innerHTML= counter;
+            span.innerHTML= counter,toString();
                                   }
                                                    }
   };
