@@ -12,9 +12,9 @@ button.onclick=function(){
             span.innerHTML= counter,Tostring() ;
         }
     }  
-  };
+  }
   
-  requset.open('GET',"http://manasa-gullapalli.imad.hasura-app.io/",true);
+  requset.open('GET',"http://manasa-gullapalli.imad.hasura-app.io/counter",true);
   request.send(null);
   
 };
