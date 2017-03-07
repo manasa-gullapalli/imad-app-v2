@@ -26,9 +26,7 @@ var submit=document.getElementById('submit_btn');
 
 submit.onclick = function(){
     
-    var nameInput = document.getElementById('name');
-var name=nameInput.value;
-
+    
 
 var request = new XMLHttpRequest() ;
   request.onreadystatechange =function(){
@@ -36,12 +34,13 @@ var request = new XMLHttpRequest() ;
     {
         if(request.status === 200){
   
+  var names= request.responseText;
+  
+  names=JSON.parse(names);
   
     for(var i=0;i<names.length;i++)
     {
-     var names= request.responseText;
-  
-  names=JSON.parse(names);
+     
      var list ='';
      
       list += '<li>'+names[i]+'</li>';
@@ -52,7 +51,11 @@ var request = new XMLHttpRequest() ;
                        }
     }
 };
-  
+
+
+  var nameInput = document.getElementById('name');
+var name=nameInput.value;
+
 
 request.open('GET','http://manasa-gullapalli.imad.hasura-app.io/submit-name?name='+name,true);
   request.send(null);
