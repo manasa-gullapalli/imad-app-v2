@@ -29,6 +29,14 @@ app.get("/myfamily",function(req,res){
 
 app.get("/friends",function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'friends.html'));
+   
+   var names =[];
+ app.get('/submit-name/:name',function(req,res){
+var names = req.params.name;
+names.push(name);
+res.send(JSON.stringify(names));
+     
+ });
 
 });
 app.get('/ui/style.css', function (req, res) {
