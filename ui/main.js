@@ -37,13 +37,11 @@ var request = new XMLHttpRequest() ;
   var names= request.responseText;
   
   names=JSON.parse(names);
+  var list ='';
   
     for(var i=0;i<names.length;i++)
     {
-     
-     var list ='';
-     
-      list += '<li>'+names[i]+'</li>';
+       list += '<li>'+names[i]+'</li>';
      }
   
   var ul = document.getElementById('namelist');
@@ -53,7 +51,7 @@ var request = new XMLHttpRequest() ;
 };
 
 
-  var nameInput = document.getElementById('name');
+var nameInput = document.getElementById('name');
 var name=nameInput.value;
 
 
