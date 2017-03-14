@@ -30,6 +30,10 @@ submit.onclick = function(){
 
 var request = new XMLHttpRequest() ;
   request.onreadystatechange =function(){
+      
+    var nameInput = document.getElementById('name');
+    var name=nameInput.value;
+
     if(request.readyState === XMLHttpRequest.DONE)
     {
         if(request.status === 200){
@@ -51,8 +55,6 @@ var request = new XMLHttpRequest() ;
 };
 
 
-var nameInput = document.getElementById('name');
-var name=nameInput.value;
 
 
 request.open('GET','http://manasa-gullapalli.imad.hasura-app.io/submit-name?name='+name,true);
