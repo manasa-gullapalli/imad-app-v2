@@ -31,11 +31,13 @@ submit.onclick = function(){
 var request = new XMLHttpRequest() ;
   request.onreadystatechange =function(){
       
-    var nameInput = document.getElementById('name');
-    var name=nameInput.value;
-
+    
     if(request.readyState === XMLHttpRequest.DONE)
     {
+        var nameInput = document.getElementById('name');
+    var name=nameInput.value;
+
+        
         if(request.status === 200){
   
   var names= request.responseText;
