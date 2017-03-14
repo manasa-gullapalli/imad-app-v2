@@ -34,8 +34,7 @@ var request = new XMLHttpRequest() ;
     
     if(request.readyState === XMLHttpRequest.DONE)
     {
-        var nameInput = document.getElementById('name');
-    var name=nameInput.value;
+    
 
         
         if(request.status === 200){
@@ -56,7 +55,8 @@ var request = new XMLHttpRequest() ;
     }
 };
 
-
+var nameInput = document.getElementById('name');
+    var name=nameInput.value;
 
 
 request.open('GET','http://manasa-gullapalli.imad.hasura-app.io/submit-name?name='+name,true);
